@@ -1,0 +1,57 @@
+# Plugins section
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+source /Users/bmesquita/Development/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Alias section
+alias dev="cd ~/Development"
+alias repos="cd ~/Development/Atlassian/repos"
+alias atl="cd ~/Development/Atlassian"
+alias cat="bat --theme='Nord'"
+alias droplet="ssh root@147.182.243.77"
+alias ll="ls -la"
+alias vsc="code ."
+
+# PROMPT='%T %n %B%~%b $'
+# Spaceship load
+autoload -U promptinit; promptinit
+prompt spaceship
+#Spaceship configuration
+SPACESHIP_PROMPT_ORDER=(
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  hg            # Mercurial section (hg_branch  + hg_status)
+  exec_time     # Execution time
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+SPACESHIP_USER_SHOW=always
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_CHAR_SYMBOL="➜ "
+SPACESHIP_CHAR_SUFFIX=" "
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/bmesquita/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/bmesquita/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/bmesquita/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/bmesquita/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export HOMEBREW_GITHUB_API_TOKEN=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
+export PATH=$PATH:/bin
+export GOPATH=/Users/bmesquita/golib
+export PATH=$PATH:$GOPATH/bin
+export GOPATH=$GOPATH:/Users/bmesquita/code
