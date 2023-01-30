@@ -18,7 +18,7 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 # Alias section
 alias dev="cd ~/Code/Personal"
 alias atl="cd ~/Code/Atlassian"
-alias cat="bat --theme='Catppuccin-mocha'"
+alias cat="bat --theme='Visual Studio Dark+'"
 alias ll="ls -lah"
 alias .server="ssh -t bmesquita@repo-access.bb-inf.net bb-repo-env"
 alias brewup="brew update && brew upgrade && exec zsh"
