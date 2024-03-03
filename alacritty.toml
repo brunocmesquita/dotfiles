@@ -1,0 +1,24 @@
+# themes from https://github.com/alacritty/alacritty-theme
+
+# import = ["/Users/mischa/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+import = ["~/.config/alacritty/themes/themes/hyper.toml"]
+
+[font]
+size = 16
+
+[font.normal]
+family = "MesloLGSDZ Nerd Font Mono"
+
+[window]
+decorations = "none"
+
+[window.padding]
+x = 12
+y = 12
+
+[font.offset]
+y = 20
+
+[cursor.style]
+blinking = "on"
+shape = "underline"
